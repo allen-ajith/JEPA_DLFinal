@@ -41,10 +41,19 @@ def load_data(device):
     return probe_train_ds, probe_val_ds
 
 
-def load_model():
-    """Load or initialize the model."""
-    # TODO: Replace MockModel with your trained model
-    model = MockModel()
+def load_model(version=1):
+    """Load trained model."""
+    model = SimpleJEPAModel()  # Using SimpleJEPAModel
+    model_path = f"simple_best_model_v{version}.pth"
+    
+    try:
+        model.load_state_dict(torch.load(model_path))
+        print(f"Loaded model from {model_path}")
+    except FileNotFoundError:
+        print(f"Could not find {model_path}")
+        raise
+        
+    model = model.to(get_device())
     return model
 
 
