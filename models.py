@@ -221,3 +221,5 @@ class SimpleJEPAModel(nn.Module):
     def get_target_embeddings(self, states):
         """Get embeddings for all states - used during training"""
         return self.encoder(states)
+
+        #Add BYOL impls

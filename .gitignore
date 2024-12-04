@@ -1,10 +1,22 @@
 # WandB
 wandb/
 artifacts/
+*.wandb
 
 # Model checkpoints
 *.pth
+*.pt
 checkpoints/
+saved_models/
+runs/
+
+# Data and logs
+*.npy
+*.npz
+*.pkl
+logs/
+tensorboard/
+*.log
 
 # Python
 __pycache__/
@@ -42,3 +54,17 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Local development settings
+*.env
+.env.local
+.env.*.local
+
+# Debug files
+*.debug
+*.bak
+*.tmp
