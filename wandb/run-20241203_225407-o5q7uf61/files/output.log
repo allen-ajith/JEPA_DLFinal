@@ -1,4 +1,0 @@
-<wandb.sdk.wandb_run.Run object at 0x7f2681bbc4c0>
-  File "<stdin>", line 1
-    wandb.log({"acc": acc, "loss": loss})
-IndentationError: unexpected indent
