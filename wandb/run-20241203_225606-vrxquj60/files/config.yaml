@@ -1,0 +1,59 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.9.20
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 55
+            "3":
+                - 1
+                - 2
+                - 16
+                - 23
+                - 55
+                - 62
+            "4": 3.9.20
+            "5": 0.18.7
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": linux-x86_64
+batch_size:
+    value: 32
+checkpoint_dir:
+    value: checkpoints
+cov_loss_weight:
+    value: 0.2
+device:
+    value: cuda
+experiment_name:
+    value: debug_run
+grad_clip:
+    value: 1
+learning_rate:
+    value: 5e-05
+num_epochs:
+    value: 2
+pred_loss_weight:
+    value: 1
+repr_dim:
+    value: 256
+resume_from:
+    value: null
+schedule:
+    value: Cosine
+train_data_path:
+    value: /scratch/DL24FA/train
+val_data_path:
+    value: /scratch/DL24FA/probe_normal/val
+var_loss_weight:
+    value: 0.8
+wandb_entity:
+    value: allen-ajith
+wandb_project:
+    value: jepa-test

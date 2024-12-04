@@ -189,7 +189,7 @@ class SimplePredictor(nn.Module):
         return self.net(combined)
 
 class SimpleJEPAModel(nn.Module):
-    def __init__(self, repr_dim=364):
+    def __init__(self, repr_dim=256):
         super().__init__()
         self.repr_dim = repr_dim
         self.encoder = SimpleEncoder(repr_dim=repr_dim)

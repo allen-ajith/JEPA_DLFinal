@@ -1,0 +1,30 @@
+Traceback (most recent call last):                                                                                                                              
+Epoch 0 | Batch     0 | Total:     1.1116 | Pred:  0.6625 | Var:  0.6646 | Cov:  0.2517
+Epoch 0 | Batch   130 | Total:     1.7312 | Pred:  1.2500 | Var:  0.6418 | Cov:  0.4806
+Epoch 0 | Batch   260 | Total:     1.3673 | Pred:  0.8703 | Var:  0.6821 | Cov:  0.4382
+Epoch 0 | Batch   390 | Total:     1.2817 | Pred:  0.7902 | Var:  0.6997 | Cov:  0.3584
+Epoch 0 | Batch   520 | Total:     1.2871 | Pred:  0.7858 | Var:  0.7210 | Cov:  0.3437
+Epoch 0 | Batch   650 | Total:     1.2968 | Pred:  0.7842 | Var:  0.7349 | Cov:  0.3583
+Epoch 0 | Batch   780 | Total:     1.2739 | Pred:  0.7540 | Var:  0.7504 | Cov:  0.3488
+Epoch 0 | Batch   910 | Total:     1.2175 | Pred:  0.7024 | Var:  0.7594 | Cov:  0.2976
+Epoch 0 | Batch  1040 | Total:     1.2910 | Pred:  0.7695 | Var:  0.7642 | Cov:  0.3148
+Epoch 0 | Batch  1170 | Total:     1.2048 | Pred:  0.6832 | Var:  0.7766 | Cov:  0.2781
+Epoch 0 | Batch  1300 | Total:     1.2080 | Pred:  0.6718 | Var:  0.7868 | Cov:  0.3203
+Epoch 0 | Batch  1430 | Total:     1.1806 | Pred:  0.6553 | Var:  0.7882 | Cov:  0.2621
+  File "/home/aa12938/DL_Final_Proj/train.py", line 161, in <module>
+    train(config=selected_config)
+  File "/home/aa12938/DL_Final_Proj/train.py", line 89, in train
+    for batch_idx, batch in enumerate(pbar):
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/aa12938/DL_Final_Proj/dataset.py", line 32, in __getitem__
+    states = torch.from_numpy(self.states[i]).float().to(self.device)
+KeyboardInterrupt

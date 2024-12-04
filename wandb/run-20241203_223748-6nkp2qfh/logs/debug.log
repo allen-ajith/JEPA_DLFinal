@@ -1,0 +1,28 @@
+2024-12-03 22:37:48,708 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2024-12-03 22:37:48,708 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Configure stats pid to 26335
+2024-12-03 22:37:48,708 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Loading settings from /home/aa12938/.config/wandb/settings
+2024-12-03 22:37:48,708 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Loading settings from /home/aa12938/DL_Final_Proj/wandb/settings
+2024-12-03 22:37:48,708 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-12-03 22:37:48,710 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-12-03 22:37:48,710 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/home/aa12938/DL_Final_Proj/train.py', 'program': '/home/aa12938/DL_Final_Proj/train.py'}
+2024-12-03 22:37:48,710 INFO    MainThread:26335 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-12-03 22:37:48,712 INFO    MainThread:26335 [wandb_init.py:_log_setup():533] Logging user logs to /home/aa12938/DL_Final_Proj/wandb/run-20241203_223748-6nkp2qfh/logs/debug.log
+2024-12-03 22:37:48,712 INFO    MainThread:26335 [wandb_init.py:_log_setup():534] Logging internal logs to /home/aa12938/DL_Final_Proj/wandb/run-20241203_223748-6nkp2qfh/logs/debug-internal.log
+2024-12-03 22:37:48,715 INFO    MainThread:26335 [wandb_init.py:init():619] calling init triggers
+2024-12-03 22:37:48,715 INFO    MainThread:26335 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {'repr_dim': 256, 'batch_size': 32, 'num_epochs': 2, 'learning_rate': 5e-05, 'grad_clip': 1.0, 'schedule': <LRSchedule.Cosine: 2>, 'pred_loss_weight': 1.0, 'var_loss_weight': 0.8, 'cov_loss_weight': 0.2, 'train_data_path': '/scratch/DL24FA/train', 'val_data_path': '/scratch/DL24FA/probe_normal/val', 'wandb_project': 'jepa-world-model', 'wandb_entity': 'allen-ajith', 'experiment_name': 'debug_run', 'resume_from': None, 'device': 'cuda', 'checkpoint_dir': 'checkpoints'}
+2024-12-03 22:37:48,717 INFO    MainThread:26335 [wandb_init.py:init():669] starting backend
+2024-12-03 22:37:48,717 INFO    MainThread:26335 [wandb_init.py:init():673] sending inform_init request
+2024-12-03 22:37:48,728 INFO    MainThread:26335 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-12-03 22:37:48,728 INFO    MainThread:26335 [wandb_init.py:init():686] backend started and connected
+2024-12-03 22:37:48,752 INFO    MainThread:26335 [wandb_init.py:init():781] updated telemetry
+2024-12-03 22:37:48,774 INFO    MainThread:26335 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2024-12-03 22:37:49,089 ERROR   MainThread:26335 [wandb_init.py:init():841] encountered error: failed to upsert bucket: returned error 403 Forbidden: {"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2024-12-03 22:37:49,089 ERROR   MainThread:26335 [wandb_init.py:init():1266] error in wandb.init()
+Traceback (most recent call last):
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1256, in init
+    return wi.init()
+  File "/scratch/aa12938/miniconda3/envs/dl-final/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 847, in init
+    raise error
+wandb.errors.errors.CommError: failed to upsert bucket: returned error 403 Forbidden: {"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2024-12-03 22:37:49,101 WARNING MsgRouterThr:26335 [router.py:message_loop():75] message_loop has been closed
